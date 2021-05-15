@@ -6,9 +6,11 @@ Created on Fri May 14 19:11:02 2021
 """
 
 
-path = "y/v/b/c"
-inputdata="../b"
 
+path = input("Enter the path you want to use")
+inputdata = input("Enter the cd path absolute or relative")
+print(path)
+print(inputdata)
 def cd(data,path):
    
     alphabet = None
@@ -18,19 +20,16 @@ def cd(data,path):
         if data[i] not in path and data[i]!="..":
             alphabet = data[i-1]
             break
-       
     if alphabet is None:
-        print(alphabet)
+        
         pathindex = path.index(data[-1])
         return path[:pathindex+1]
     else:
-        print(alphabet)
+        
         try:
             beforeindex = path.index(alphabet)
             afterindex = inputdata.index(alphabet)
-            print(beforeindex,afterindex)
         except Exception:
-            print("ex")
             path = path[:-1]
             data = data[-1]
             path+=data
@@ -43,3 +42,4 @@ def cd(data,path):
     return beforepath
 
 result = cd(inputdata,path)
+print("The path is changed to ",result)
