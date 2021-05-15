@@ -1,0 +1,4 @@
+INFO:root:Data retreived successfully
+DEBUG:root:Running Diagnostics
+WARNING:root:Unknown File: abc.txt
+ERROR:root:An issue occurred while copying files
